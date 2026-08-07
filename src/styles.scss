@@ -1,1 +1,103 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --widthbtn: 190px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner {
+  margin: 72px auto;
+}
+
+.banner img {
+  max-width: 100%;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 0 12px 25px;
+}
+
+.btn-primary {
+  background: var(--bs-indigo);
+  color: #fff;
+  border-radius: 4px;
+  padding: 7px 49px;
+  border: none;
+  display: inline;
+  width: var(--widthbtn);
+}
+
+.album {
+  margin-bottom: 72px;
+}
+
+.answers {
+  margin-bottom: 72px;
+}
+
+.accordion-button {
+  padding: 25px 23px;
+  border-radius: 10px;
+  background: #14448A;
+  color: #fff;
+}
+
+.accordion-item {
+  margin-bottom: 16px;
+  border: none;
+}
+
+form {
+  margin-bottom: 48px;
+}
+
+h2 {
+  margin-bottom: 60px;
+  font-weight: bold;
+}
+
+.form-label {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.address {
+  margin-bottom: 24px;
+}
+
+.row {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.form-button {
+  text-align: left;
+}
+
+.rights {
+  margin-top: auto;
+  padding: 19px 0 19px 15px;
+}

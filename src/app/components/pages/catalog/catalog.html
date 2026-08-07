@@ -1,0 +1,17 @@
+<!-- сетка товаров -->
+<div class="container text-center album py-5">
+  <div class="container">
+    <h1 class="text-center fw-bold">Наши чайные коллекции</h1>
+    <div class="row g-3">
+
+      @for (product of products(); track product.id) {
+        <div class="col col-sm-6 col-md-4 ">
+          <app-product
+          [product]="product"
+          [routerLink]="['/product-page', product.id]"></app-product>
+        </div>
+      }
+
+    </div>
+  </div>
+</div>

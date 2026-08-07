@@ -1,0 +1,14 @@
+<div class="product-field">
+  <div class="product-image">
+    <img src="{{product().image}}" alt="product-banner">
+  </div>
+  <h3 class="product-title">{{ product().title }}</h3>
+  <p class="product-description">{{ product().description }}</p>
+  <div class="d-flex flex-row align-items-center">
+    <a
+      [routerLink]="'/order'" [queryParams]="{ product: product().title }"
+      class="btn btn-primary to-buy-button"
+    >Купить</a>
+    <div class="product-price">Цена: {{ product().price}} руб.</div>
+  </div>
+</div>
