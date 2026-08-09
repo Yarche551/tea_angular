@@ -10,16 +10,58 @@
         <div class="col-md-4">
           <label for="name" class="form-label">Имя</label>
           <input type="text" id="name" class="name form-control" formControlName="name">
+          @if (orderForm.get('name')?.invalid
+          && (orderForm.get('name')?.touched
+            || orderForm.get('name')?.dirty)
+          && orderForm.get('name')?.errors?.['required']) {
+            <div
+              class="invalid-feedback">
+              Требуется ввести имя
+            </div>
+          }
+          @if (orderForm.get('name')?.errors?.['pattern']) {
+            <div class="w-100 invalid-feedback">
+              Имя должно содержать только буквы
+            </div>
+          }
         </div>
 
         <div class="col-md-4">
           <label for="surname" class="form-label">Фамилия</label>
           <input type="text" id="surname" class="surname form-control" formControlName="lastName">
+          @if (orderForm.get('lastName')?.invalid
+          && (orderForm.get('lastName')?.touched
+            || orderForm.get('lastName')?.dirty)
+          && orderForm.get('lastName')?.errors?.['required']) {
+            <div
+              class="invalid-feedback">
+              Требуется ввести фамилию
+            </div>
+          }
+          @if (orderForm.get('lastName')?.errors?.['pattern']) {
+            <div class="w-100 invalid-feedback">
+              Фамилия должно содержать только буквы
+            </div>
+          }
         </div>
 
         <div class="col-md-4">
           <label for="phone" class="form-label">Телефон</label>
           <input type="text" id="phone" class="phone form-control" formControlName="phone">
+          @if (orderForm.get('phone')?.invalid
+          && (orderForm.get('phone')?.touched
+            || orderForm.get('phone')?.dirty)
+          && orderForm.get('phone')?.errors?.['required']) {
+            <div
+              class="invalid-feedback">
+              Требуется ввести номер телефона
+            </div>
+          }
+          @if (orderForm.get('phone')?.errors?.['pattern']) {
+            <div class="w-100 invalid-feedback">
+              Номер телефона должен содержать только 11 цифр
+            </div>
+          }
         </div>
       </div>
 
@@ -27,11 +69,29 @@
         <div class="col-md-6">
           <label for="country" class="form-label">Страна</label>
           <input type="text" id="country" class="country form-control" formControlName="country">
+          @if (orderForm.get('country')?.invalid
+          && (orderForm.get('country')?.touched
+            || orderForm.get('country')?.dirty)
+          && orderForm.get('country')?.errors?.['required']) {
+            <div
+              class="invalid-feedback">
+              Требуется ввести страну проживания
+            </div>
+          }
         </div>
 
         <div class="col-md-6">
           <label for="index" class="form-label">Индекс</label>
           <input type="text" id="index" class="index form-control" formControlName="zip">
+          @if (orderForm.get('zip')?.invalid
+          && (orderForm.get('zip')?.touched
+            || orderForm.get('zip')?.dirty)
+          && orderForm.get('zip')?.errors?.['required']) {
+            <div
+              class="invalid-feedback">
+              Требуется ввести zip-код
+            </div>
+          }
         </div>
       </div>
 
@@ -39,6 +99,20 @@
         <div class="col-md-12">
           <label for="address" class="form-label">Адрес</label>
           <input type="text" id="address" class="address form-control" formControlName="address">
+          @if (orderForm.get('address')?.invalid
+          && (orderForm.get('address')?.touched
+            || orderForm.get('address')?.dirty)
+          && orderForm.get('address')?.errors?.['required']) {
+            <div
+              class="invalid-feedback">
+              Требуется ввести номер телефона
+            </div>
+          }
+          @if (orderForm.get('address')?.errors?.['pattern']) {
+            <div class="w-100 invalid-feedback">
+              Вводить можно только буквы, цифры, пробелы, символы "-" и "/"
+            </div>
+          }
         </div>
       </div>
 
@@ -65,5 +139,5 @@
     </div>
   </form>
 } @else {
-  <p>Спасибо за заказ!</p>
+  <p class="thx-for-order">Спасибо за заказ!</p>
 }

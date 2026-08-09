@@ -12,6 +12,12 @@ body {
   overflow-x: hidden;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .logo {
   margin-right: 10px;
 }
@@ -100,4 +106,21 @@ h2 {
 .rights {
   margin-top: auto;
   padding: 19px 0 19px 15px;
+}
+
+app-footer {
+  margin-top: auto;
+}
+
+input.ng-invalid.ng-dirty,
+input.ng-invalid.ng-touched {
+  border-color: red;
+}
+.invalid-feedback {
+  display: block;
+}
+
+.thx-for-order {
+  text-align: center;
+  margin: auto 0;
 }

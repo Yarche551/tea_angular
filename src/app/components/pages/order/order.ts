@@ -25,7 +25,7 @@ export class Order {
       name: ['', [Validators.required, Validators.pattern(/^[a-zA-Zа-яА-Я]+$/)]],
       lastName: ['', [Validators.required, Validators.pattern(/^[a-zA-Zа-яА-Я]+$/)]],
       phone: ['', [Validators.required, Validators.pattern(/^\+?[0-9]{11}$/)]],
-      country: [''],
+      country: ['', Validators.required],
       zip: ['', Validators.required],
       address: ['', Validators.pattern(/^[a-zA-Zа-яА-Я0-9 \-/]+$/)],
       productTitle: [{ value: '', disabled: true }, Validators.required],
@@ -62,8 +62,10 @@ export class Order {
       next: (response) => {
         if (response.success === 1) {
           this.isOrderSent.set(true);
+          // успешно
         } else {
           this.hasOrderError.set(true);
+          // неуспешно
         }
       },
       error: () => this.hasOrderError.set(true),
