@@ -1,14 +1,14 @@
 import { Component, signal } from '@angular/core';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { OrderService } from '../../../services/order.service';
-import { OrderRequestType } from '../../../types/order-request.type';
+import { OrderService } from '../../../../services/order.service';
+import { OrderRequestType } from '../../../../types/order-request.type';
 
 @Component({
   selector: 'app-order',
-  imports: [ReactiveFormsModule],
   templateUrl: './order.html',
   styleUrl: './order.scss',
+  standalone: false,
   providers: [OrderService],
 })
 export class Order {

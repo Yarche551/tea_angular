@@ -1,15 +1,12 @@
 import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { Observable } from 'rxjs';
 import { DOCUMENT } from '@angular/core';
-import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-main',
-  imports: [RouterLink, NgbAccordionModule],
   templateUrl: './main.html',
   styleUrl: './main.scss',
-  standalone: true,
+  standalone: false,
 })
 export class Main implements OnInit {
   private observable: Observable<string>;

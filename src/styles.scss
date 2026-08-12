@@ -1,7 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @use 'bootstrap/scss/bootstrap';
+
 :root {
   --widthbtn: 190px;
+}
+
+app-root {
+  display: block;
 }
 
 * {
@@ -105,7 +110,6 @@ h2 {
 }
 
 .rights {
-  margin-top: auto;
   padding: 19px 0 19px 15px;
 }
 
@@ -127,6 +131,3 @@ input.ng-invalid.ng-touched {
   font-size: 40px;
   font-weight: bold;
 }
-
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';

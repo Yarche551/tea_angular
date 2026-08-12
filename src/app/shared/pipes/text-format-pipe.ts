@@ -2,6 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'textFormat',
+  standalone: false,
 })
 export class TextFormatPipe implements PipeTransform {
   transform(value: string): string {
