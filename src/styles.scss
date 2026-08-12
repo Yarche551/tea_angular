@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'bootstrap/scss/bootstrap';
 :root {
   --widthbtn: 190px;
 }
@@ -67,7 +68,7 @@ h3 {
 .accordion-button {
   padding: 25px 23px;
   border-radius: 10px;
-  background: #14448A;
+  background: #14448a;
   color: #fff;
 }
 
@@ -126,3 +127,6 @@ input.ng-invalid.ng-touched {
   font-size: 40px;
   font-weight: bold;
 }
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
